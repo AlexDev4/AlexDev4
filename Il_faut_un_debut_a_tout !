@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+
+int main(int argc, char *argv[])
+{
+    const int MIN = 1;
+    int NombreMaximum = 1;
+    int NombreJoueur = 0;
+    int NombreVies = 8;
+    int difficulte = 0;
+    int continuerPartie = 1;
+
+    printf("======JEU DU PLUS OU MOINS======\n");
+
+     do
+    {
+    printf("Choisissez votre niveau de difficulte\n");
+    printf("1. Je n'ai jamais joue a un jeu pc : 1 - 50, 10 vies\n");
+    printf("2. Je suis gamer moi Mossieu ! : 1-125, 8 vies\n");
+    printf("3. PGM : 1 - 225, 6 vies\n");
+    printf("4. J'ai fini ghost and goblins les yeux fermes et une main dans le dos : 1 - 325, 4 vies\n");
+
+    scanf("%d", &difficulte);
+
+    switch(difficulte)
+    {
+        case 1 :
+        NombreMaximum = 50;
+        NombreVies = 10;
+        break;
+
+        case 2 :
+        NombreMaximum = 125;
+        NombreVies = 8;
+        break;
+
+        case 3 :
+        NombreMaximum = 225;
+        NombreVies = 6;
+        break;
+
+        case 4 :
+        NombreMaximum = 325;
+        NombreVies = 4;
+        break;
+
+        default :
+        NombreMaximum = 15000;
+        NombreVies = 30;
+        printf("Succes debloque : vous venez de decouvrir la difficulte cache, bon courage !\n");
+        break;
+        }
+
+    srand(time(NULL));
+    int NombreMystere = (rand() % (NombreMaximum - MIN + 1)) + MIN;//generation du nombre aléatoire OK
+
+    printf("A quel nombre je pense ? ");
+    scanf("%d", &NombreJoueur);
+
+
+    while(NombreJoueur != NombreMystere && NombreVies != 0)
+    {
+        if (continuerPartie = 1)
+    {
+        if(NombreJoueur > NombreMystere)
+        {
+            printf("C'est moins\n");
+            NombreVies--;
+            printf("Il vous reste %d vies\n", NombreVies);
+            printf("Essayez encore :");
+            scanf("%d", &NombreJoueur);
+        }
+        else if(NombreJoueur < NombreMystere)
+        {
+            printf("C'est plus\n");
+            NombreVies--;
+            printf("Il vous reste %d vies\n", NombreVies);
+            printf("Essayez encore :");
+            scanf("%d", &NombreJoueur);
+        }
+    }
+    }
+        if (NombreJoueur = NombreMystere && NombreVies != 0)
+        {
+            printf("Bravo !");
+            printf("Veux tu rejouer ?\n 1. Oui\n 0. Non\n");
+            scanf("%d", &continuerPartie);
+        }
+        else
+        {
+          printf("Perdu !");
+          printf("La solution etait %d\n", NombreMystere);
+          printf("Veux tu rejouer ?\n 1. Oui\n 0. Non\n");
+          scanf("%d", &continuerPartie);
+
+        }
+        }
+          while (continuerPartie != 0 );
+    }
