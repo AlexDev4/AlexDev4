@@ -1,7 +1,5 @@
 - 👋 Hi, I’m @AlexDev4
-- 👀 I’m interested in new technologies, history and actuality
-- 🌱 I’m starting a BTS SIO (Systeme Informatique des Organisations / IT System of Organisation) option SLAM (development)
-- 🐱‍🚀 I'm in career change from teacher to developper.
 - 💻 Since february 2023, i work in a company on Magento 2's websites.
 - 💞️ I’m looking to collaborate on everything !
-- 📫 How to reach me : alexis-olive@live.fr
+- 📫 How to reach me : alexisolive.informatique@gmail.com
+- I am creating Magento 2's module. All my modules are free and open source. If you need something or have somes ideas --> alexisolive.informatique@gmail.com
